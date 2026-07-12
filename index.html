@@ -1,26 +1,140 @@
-🚀GitOps Continuous Delivery Pipeline
-    Version 1.0 - The pipeline is live!GitOps Production Platform
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitOps Production Platform</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text: #f8fafc;
+            --azure-blue: #0078d4;
+            --argo-green: #4ade80;
+            --glow: 0 0 20px rgba(56, 189, 248, 0.2);
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(0, 120, 212, 0.15), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(74, 222, 128, 0.15), transparent 25%);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .dashboard {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 3rem;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: var(--glow);
+            text-align: center;
+        }
+        .header {
+            margin-bottom: 2.5rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 0.5rem 0;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(74, 222, 128, 0.1);
+            border: 1px solid rgba(74, 222, 128, 0.2);
+            color: var(--argo-green);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .pulse {
+            width: 8px;
+            height: 8px;
+            background-color: var(--argo-green);
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 0 10px var(--argo-green);
+            animation: pulse-animation 2s infinite;
+        }
+        @keyframes pulse-animation {
+            0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+        .card h3 { margin: 0 0 0.5rem 0; font-size: 1.25rem; color: #e2e8f0; }
+        .card p { margin: 0; color: #94a3b8; font-size: 0.875rem; }
+        .accent-blue { color: #38bdf8 !important; }
+        .accent-purple { color: #c084fc !important; }
+        .accent-green { color: #4ade80 !important; }
+        .footer {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>Prateek's DevOps Platform</h1>
+            <div class="status-badge">
+                <div class="pulse"></div>
+                Production System Live
+            </div>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <h3 class="accent-blue">Azure AKS</h3>
+                <p>Cloud Infrastructure</p>
+            </div>
+            <div class="card">
+                <h3 class="accent-purple">GitHub Actions</h3>
+                <p>Continuous Integration</p>
+            </div>
+            <div class="card">
+                <h3 class="accent-green">Argo CD</h3>
+                <p>Continuous Deployment</p>
+            </div>
+        </div>
 
-
-    
-        Protik's GitOps Platform
-        Live Production Environment
-        
-        
-            
-                Azure AKS
-                Infrastructure
-            
-            
-                Argo CD
-                Reconciliation
-            
-            
-                v2.0
-                Deployment
-            
-        
-        
-        
-            Automated via GitHub Actions CI • State managed via GitOps
+        <div class="footer">
+            Automated Pipeline v2.0 • Zero-Touch Reconciliation • State Managed via GitOps
+        </div>
+    </div>
+</body>
+</html>
